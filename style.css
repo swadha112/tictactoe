@@ -1,0 +1,94 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Preahvihear&family=Rubik+Bubbles&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+}
+nav{
+    background-color:  rgb(59, 147, 225);
+    color:black;
+    height: 60px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Rubik Bubbles' ;
+
+}
+nav ul
+{
+    list-style-type: none;
+}
+
+.game{
+    background-color: rgb(146, 195, 238);
+    display:flex;
+   justify-content: center;
+   margin-top: 50px;
+}
+
+.contains{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family:'Rubik Bubbles' ;
+
+}
+
+.box{
+    
+    border: 2px solid black;
+    font-size: 6vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.box:hover{
+    background-color: rgb(59, 147, 225);
+}
+.info{
+    font-size: 35px;
+}
+.ginfo{
+    padding: 0 30px;
+    font-family: 'Preahvihear';
+    color: black
+
+}
+
+.imgbox img{
+    width: 0;
+    padding-top: 10px;
+    transition: width 1s ease-in-out;
+    
+ 
+}
+
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    margin: 0 25px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(231, 240, 247) ;
+    font-family: 'Preahvihear';
+    font-size: 20px;
+}
+
