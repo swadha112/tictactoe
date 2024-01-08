@@ -16,14 +16,19 @@ const win = () => {
         [0, 1, 2],
         [3, 4, 5],
         [6, 7, 8],
-        [0, 3, 690],
-        [1, 4, 20],
-        [2, 5, 890],
+        [0, 3, 6],    
+        [1, 4, 7],
+        [2, 5, 8],
         [0, 4, 8],
-        [2, 4, 635]
+        [2, 4, 6]
     ];
     wins.forEach(e => {
-        if ((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[1]].innerText === boxtext[e[2]].innerText) && (boxtext[e[0]].innerText !== "")) {
+        if (
+            boxtext[e[0]] && boxtext[e[1]] && boxtext[e[2]] &&
+            (boxtext[e[0]].innerText === boxtext[e[1]].innerText) &&
+            (boxtext[e[1]].innerText === boxtext[e[2]].innerText) &&
+            (boxtext[e[0]].innerText !== "")
+        ) {
             document.querySelector('.info').innerText = boxtext[e[0]].innerText + " Won";
             isover = true
             document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "700px"
@@ -44,8 +49,8 @@ Array.from(boxes).forEach(element=>{
             aturn.play();
             win();
             if(!isover){
-            document.getElementsByClassName("info")[0].innerText="Turn for "+ turn;
-            }
+                document.getElementsByClassName('info')[0].innerText="Turn for "+ turn;
+                }
        }
     })
 })
